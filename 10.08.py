@@ -8,3 +8,5 @@ for i in range(a):
     if int(c[i])<b:
         c.remove(c[i])
 print(c)
+
+print("Hello world!")
