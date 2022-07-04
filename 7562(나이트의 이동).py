@@ -75,4 +75,4 @@ for _ in range(t):
                     matrix[nx][ny] = matrix[x][y] + 1    
     
     answer = bfs()
-    print(answer)
+    print(answer) #bfs의 return...

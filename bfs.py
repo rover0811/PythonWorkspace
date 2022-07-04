@@ -5,14 +5,14 @@
 
 from collections import deque
 
-def bfs(graph,start,visited):   #너는 왜 인자가 3개일까?
-    queue=deque([start])          #넌 뭘까? # bfs는 함수를 여러번 실행하지 않는다 큐 형식으로 진행되니까.. 그냥 큐 만들어준거
-    visited[start]=True              #넌 뭘까? start==|E| 원소의 개수만큼 방문 배열을 만들어준 것
-    while queue:
-        v=queue.popleft()       
-        print(v,end=' ')         #왜 이렇게 할까? 파이썬의 기본은 end='\n'임
-        for i in graph[v]:
-            if not visited[i]:
+def bfs(graph,start,visited):        #너는 왜 인자가 3개일까?-> 함수는 그래프, 첫 시작, 그리고 방문 배열이 필요하다
+    queue=deque([start])             #큐에 첫번째 정점 넣어주기
+    visited[start]=True              #넌 뭘까? 시작했으니 거긴 방문이야
+    while queue:                     #이제 시작하기 지금 큐에 하나 들어가있으니 실행됨
+        v=queue.popleft()            #빼고 출력
+        print(v,end=' ')             #왜 이렇게 할까? 파이썬의 기본은 end='\n'임
+        for i in graph[v]:           #그래프의 시작 배열로 들어간다. 즉 i에는 2, 3, 8이 들어갈 예정
+            if not visited[i]:       
                 queue.append(i)
                 visited[i]=True
 
