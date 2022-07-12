@@ -5,4 +5,4 @@ if scale==inputscale:
 elif scale==sorted(inputscale,reverse=True):
     print("descending")
 else:
-    print("mix")
+    print("mixed")
