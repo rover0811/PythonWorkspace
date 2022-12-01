@@ -37,6 +37,20 @@ def order(P, i, j):
         print(")", end='')
 
 
+# def order2(P, i, j):
+#     if(i == j):
+#         # print("A%d" % (i), end=' ')
+#         pass
+#     else:
+#         k = P[i][j]
+#         # print("(", end='')
+#         print("order({0},{1})".format(i, k))
+#         order2(P, i, k)
+#         print("order({0},{1})".format(k+1, j))
+#         order2(P, k+1, j)
+#         # print(")", end='')
+
+
 ChainedMatrix(M, P, n, d, 1, 6)
 print("\norder 알고리즘 출력:")
 order(P, 1, 6)
