@@ -25,8 +25,8 @@ def merge(U:nodetype,p:int,q:int):#merge 함수 구현부
     else:
         U[q].parent = p
 
-# graph=[edge(1,2,1),edge(1,3,3),edge(2,3,3),edge(2,4,6),edge(3,4,4),edge(3,5,2),edge(4,5,5)] #교재
-graph=[edge(1,3,3),edge(1,5,1),edge(1,4,6),edge(2,3,3),edge(2,4,7),edge(3,4,6),edge(4,5,2)] #자작 데이터
+graph=[edge(1,2,1),edge(1,3,3),edge(2,3,3),edge(2,4,6),edge(3,4,4),edge(3,5,2),edge(4,5,5)] #교재
+# graph=[edge(1,3,3),edge(1,5,1),edge(1,4,6),edge(2,3,3),edge(2,4,7),edge(3,4,6),edge(4,5,2)] #자작 데이터
 
 graph.sort(key = lambda x: x.weight) 
 F=[]
