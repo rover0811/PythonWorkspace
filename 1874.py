@@ -10,3 +10,51 @@
 출력
 입력된 수열을 만들기 위해 필요한 연산을 한 줄에 한 개씩 출력한다. push연산은 +로, pop 연산은 -로 표현하도록 한다. 불가능한 경우 NO를 출력한다.
 '''
+# K 입력
+K=int(input())
+
+# 크레센도 수열 생성
+preparedArray=[i for i in range(K,0,-1)]
+
+
+print(preparedArray)
+
+# # 입력받은 수열 생성
+# targetArray=[]
+# for x in range(K):
+#     targetArray.append(int(input()))
+
+# # targetArray의 배열을 순회하면서 이것에 맞춰야함
+
+# pointer=preparedArray[-1]
+
+# resultArray=[]
+# print(f"pointer=={pointer}")
+
+# for i in targetArray:
+#     if pointer< i:
+#         for i in range(i-pointer):
+#             resultArray.append(preparedArray.pop())
+
+
+
+
+
+
+
+
+
+
+
+
+# tempArray=[]
+# resultArray=[]
+# tempNum=0
+# for i in targetArray:
+#     print(f"i는 {i}")
+#     while(tempNum!=i):
+#         tempNum=preparedArray.pop()
+#         tempArray.append(tempNum)
+#         print(tempArray)
+#     resultArray.append(targetArray.pop())
+
