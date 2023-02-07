@@ -10,19 +10,65 @@
 출력
 입력된 수열을 만들기 위해 필요한 연산을 한 줄에 한 개씩 출력한다. push연산은 +로, pop 연산은 -로 표현하도록 한다. 불가능한 경우 NO를 출력한다.
 '''
+
+import sys
+from collections import deque
 # K 입력
-K=int(input())
+K=int(sys.stdin.readline())
 
 # 크레센도 수열 생성
-preparedArray=[i for i in range(K,0,-1)]
+preparedArray=deque([i for i in range(1,K+1)])
 
 
 print(preparedArray)
 
-# # 입력받은 수열 생성
-# targetArray=[]
-# for x in range(K):
-#     targetArray.append(int(input()))
+# 입력받은 수열 생성
+inputArray=deque()
+for x in range(K):
+    inputArray.appendleft(int(sys.stdin.readline()))
+
+print(inputArray)
+
+projectArray=deque()
+temp=deque()
+i=0
+
+# print(inputArray[0])
+
+while(len(preparedArray)!=0):
+    if(preparedArray[i]==inputArray[i]):
+        projectArray.append(preparedArray.popleft())
+        print("+")
+        i+=1
+    elif(preparedArray[i]<inputArray[i]):
+        sub=inputArray[i]-preparedArray[i] #2
+        for i in range(sub):
+            projectArray.append(preparedArray.popleft())
+            print("+")
+        for i in range(sub):
+            temp.append(projectArray.pop())
+            print("-")
+        projectArray.append(preparedArray.popleft())
+    else:
+        pass
+        #미완
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # # targetArray의 배열을 순회하면서 이것에 맞춰야함
 
