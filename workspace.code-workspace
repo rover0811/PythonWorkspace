@@ -1,16 +1,21 @@
 {
 	"folders": [
 		{
-			"path": "..\\..\\..\\..\\cryptoauto"
-		},
-		{
+
 			"path": "."
 		},
 		{
-			"path": "..\\..\\..\\..\\Momentum"
+			"path": "..\\Momentum"
 		},
 		{
-			"path": "..\\..\\..\\..\\C"
+			"path": "..\\My project"
+		},
+		{
+			"path": "..\\Algorithm"
+		},
+		{
+			"path": "..\\py_workstation_cote"
+
 		}
 	],
 	"settings": {}
