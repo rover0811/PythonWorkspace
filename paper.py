@@ -92,34 +92,119 @@
 # for i in product(items, repeat=m):
 #     print(*i, end='\n')
 
-N=int(input())
+# N=int(input())
 
-list=[i for i in range(1,N+1)]
+# list=[i for i in range(1,N+1)]
 
-for index,value in enumerate(list):
-    for i in list[:index+1]:
-        print(i,end=" ")
-    print()
-print()
-for index,value in enumerate(list):
-    for i in list[:N-index]:
-        print(i,end=" ")
-    print()
-print()
-for index,value in enumerate(list):
-    print(str(value)*(index+1))
-print()
-for index,value in enumerate(list[::-1]):
-    print(str(value)*(N-index))
+# for index,value in enumerate(list):
+#     for i in list[:index+1]:
+#         print(i,end=" ")
+#     print()
+# print()
+# for index,value in enumerate(list):
+#     for i in list[:N-index]:
+#         print(i,end=" ")
+#     print()
+# print()
+# for index,value in enumerate(list):
+#     print(str(value)*(index+1))
+# print()
+# for index,value in enumerate(list[::-1]):
+#     print(str(value)*(N-index))
 
 
-# a=[1,2,3,4,5,6,7,8,9,10]
+# # a=[1,2,3,4,5,6,7,8,9,10]
 
-# for i in a:
-#     print(i)
+# # for i in a:
+# #     print(i)
 
-a=map(int,input().split())
+# a=map(int,input().split())
 
+# a,b=3,4
+
+# a,b=b,a
+
+# print(a,b)
+
+# array = [[0 for col in range(5)] for row in range(5)]
+# k=0
+
+# for row in array:
+#     for i in row:
+#         print(i,end=" ")
+#     print()
+
+
+# array = [[0 for col in range(5)] for row in range(5)]
+
+# start=2
+# end=4-start
+# num=0
+# for row in array:
+#     for k in range(start,end):
+#         row[k]=num
+#         num+=1
+    
+#     start-=1
+#     end=4-start
+#     print(start,end)
+
+# for i in range(5):
+#     for k in range(5):
+#         print(array[i][k], end=" ")
+#     print()
+# import math
+# a,b=map(int,input().split())
+
+# print(math.gcd(a,b))
+# print(math.lcm(a,b))
+# sum=0
+# a=[]
+# for i in range(1,1000001):
+#     sum=0
+#     for item in str(i):
+#         sum+=int(math.factorial(int(item)))
+#     if(i==sum):
+#         a.append(i)
+
+# print(a)
+
+# N=int(input())
+# W=int(input())
+# ary=map(int,input().split())
+# sum=0
+# front=0
+# rear=0
+
+# for i in range(len()): 
+
+# sample_set = {"hello", 42, (1, 2, 3)}
+# sample_set.add("world")
+# sample_set.update("abc")  # set("abc") => {"a", "b", "c"}를 기존 집합에 더한다.
+# sample_set.remove(42)
+# for item in sample_set:
+#     print(item, type(item))
+# print(sample_set)
+
+N=int(input()) #6
+W=int(input()) #3
+
+ary=list(map(int, input().split()))
+# 1 0 2 0 4 3 
+
+#현재 frontidx는 3이어야함
+tempsum=sum(ary[:W])
+sumary=[sum(ary[:W])]
+frontidx=0
+rearidx=W
+
+for i in ary[N:]:
+    sum=sum-ary[frontidx]+ary[rearidx]
+
+
+    
+
+    
 
 
 
