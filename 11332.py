@@ -1,46 +1,39 @@
 from math import factorial, log10,log2
+from sys import stdin
 
-def O_n(N,T,L):
-    if (log10(N*T)<=8+log10(L)):
-        return "May Pass."
-    else:
-        return "TLE!"
+N=int(stdin.readline())
 
-def O_n3(N,T,L):
-    if (3*log10(N)+log10(T)<=8+log10(L)):
-        return "May Pass."
-    else: return "TLE!"
+a=[(k[0],*map(int,k[1:]))for k in [list(stdin.readline().split()) for i in range(N)]]
 
-def O_n2(N,T,L):
-    if (2*log10(N)+log10(T)<=8+log10(L)):
-        return "May Pass."
-    else:
-        return "TLE!"
-
-def O_nFact(N,T,L):
-    if(T*log10(factorial(N))<=8+log10(L)):
-        return"May Pass."
-    else:
-        return "TLE!"
-    
-def O_2(N,T,L):
-    if (N+log2(T)<=8*(1+log2(5)+log2(L))):
-        return"May Pass."
-    else:
-        return "TLE!"
-a=[]
-for i in range(int(input())):
-    S,N,T,L=map(str,input().split())
-    if S=="O(N)":
-        a.append(O_n(int(N),int(T),int(L)))
-    elif S=="O(N^2)":
-        a.append(O_n2(int(N),int(T),int(L)))
-    elif S=="O(N^3)":
-        a.append(O_n3(int(N),int(T),int(L)))
-    elif S=="O(2^N)":
-        a.append(O_2(int(N),int(T),int(L)))
-    elif S=="O(N!)":
-        a.append(O_nFact(int(N),int(T),int(L)))
-
+#시간복잡도, 입력의 최대 범위, 테스트 케이스의 수, 제한시간
+# print(a)
+PERFORMANCE=100000000
+#채점 시스템은 1초에 100000000가지 연산을 할 수 있음
 for i in a:
-    print(i)
+    if i[0]=="O(N)":
+        if i[3]*PERFORMANCE>=i[1]*i[2]*1:
+            print("May Pass.")
+        else:
+            print("TLE!")
+    elif i[0]=="O(N^2)":
+        if i[3]*PERFORMANCE>=i[1]**2*i[2]:
+            print("May Pass.")
+        else:
+            print("TLE!") 
+    elif i[0]=="O(N^3)":
+        if i[3]*PERFORMANCE>=i[1]**3*i[2]:
+            print("May Pass.")
+        else:
+            print("TLE!") 
+    elif i[0]=="O(2^N)":
+        if i[3]*PERFORMANCE>=2**i[1]*i[2]:
+            print("May Pass.")
+        else:
+            print("TLE!") 
+    elif i[0]=="O(N!)":
+        if i[3]*PERFORMANCE>=factorial(i[1])*i[2]:
+            print("May Pass.")
+        else:
+            print("TLE!") 
+
+# O (N), O (N^2), O (N^3), O (2^N), O (N!)

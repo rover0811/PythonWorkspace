@@ -449,10 +449,52 @@
 # print(f"a: {a}, b: {b}")
 # print(f"a & b: {a & b}")
 
-def intersect(x,y):
-    return {*x}&{*y}
+# def intersect(x,y):
+#     return {*x}&{*y}
 
-print(intersect([1,2,3,4],[2,3,4]))
+# print(intersect([1,2,3,4],[2,3,4]))
+
+# def get_factorial(n):
+#     """n!의 값을 돌려준다."""
+#     result = 1
+#     for item in range(2, n + 1):
+#         result *= item
+#     return result
+
+
+# for item in range(2):
+#     print(f"{item}! = {get_factorial(item)}")
+
+# a=[]
+
+# def add():
+#     a.extend(list(range(10)))
+
+# add()
+
+# print(a)
+
+def initialize():
+    global count
+    count=0
+
+
+def counter():
+    cnt = count
+
+    def increment():
+        nonlocal cnt
+        cnt += 1
+
+    increment()
+    return cnt
+
+
+initialize()
+
+count=counter()
+
+print(count)
 
 
 
