@@ -474,27 +474,58 @@
 
 # print(a)
 
-def initialize():
-    global count
-    count=0
+# def initialize():
+#     global count
+#     count=0
 
 
-def counter():
-    cnt = count
+# def counter():
+#     cnt = count
 
-    def increment():
-        nonlocal cnt
-        cnt += 1
+#     def increment():
+#         nonlocal cnt
+#         cnt += 1
 
-    increment()
-    return cnt
+#     increment()
+#     return cnt
 
 
-initialize()
+# initialize()
 
-count=counter()
+# count=counter()
 
-print(count)
+# print(count)
+
+# # 문자열 메소드인 join함수를 사용하는 방법
+# yyyy,mm,dd=input().split(".")
+# fixed_date=(mm,dd,yyyy)
+# print("-".join(fixed_date))
+
+# # f-string을 이용하는 방법
+# yyyy,mm,dd=input().split(".")
+# fixed_date=(mm,dd,yyyy)
+# print(f"{mm}-{dd}-{yyyy}")
+
+# # format메소드를 사용하는 방법 + 이터러블 연산자
+# yyyy,mm,dd=input().split(".")
+# fixed_date=(mm,dd,yyyy)
+# print("{}-{}-{}".format(*fixed_date))
+
+
+# # format메소드를 사용하는 방법 , 단순 대입
+# yyyy,mm,dd=input().split(".")
+# print("{}-{}-{}".format(mm,dd,yyyy))
+
+# # 리스트을 가지고 사용하는 방법
+# birth_date=input().split(".")
+# birth_date=(birth_date[1],birth_date[2],birth_date[0])
+# print("-".join("-"))
+
+import builtins
+
+print(dir(builtins))
+
+
 
 
 

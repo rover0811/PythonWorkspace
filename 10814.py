@@ -17,5 +17,5 @@
 
 
 ## 틀림
-[print(k[0],k[1]) for k in sorted([(*input().split(),i) for i in range(int(input()))],key=lambda x:(x[0],x[2]))]
+# [print(k[0],k[1]) for k in sorted([(*input().split(),i) for i in range(int(input()))],key=lambda x:(x[0],x[2]))]
 
