@@ -5,7 +5,7 @@
 
 from collections import deque
 
-def bfs(graph,start,visited):        #너는 왜 인자가 3개일까?-> 함수는 그래프, 첫 시작, 그리고 방문 배열이 필요하다
+def bfs(start,visited):        #너는 왜 인자가 3개일까?-> 함수는 그래프, 첫 시작, 그리고 방문 배열이 필요하다
     queue=deque([start])             #큐에 첫번째 정점 넣어주기
     visited[start]=True              #넌 뭘까? 시작했으니 거긴 방문이야
     while queue:                     #이제 시작하기 지금 큐에 하나 들어가있으니 실행됨
@@ -29,5 +29,5 @@ graph=[
 ]
 visited=[False]*9
 
-bfs(graph,1,visited)
+bfs(1,visited)
 
