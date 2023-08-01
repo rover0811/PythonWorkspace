@@ -47,7 +47,32 @@ def bfs(a,b):
             if nx>=0 and nx<n and ny>=0 and ny<m and graph[nx][ny]==1:
                 q.append((nx,ny))
                 graph[nx][ny]=0
+
+# def bfs(a,b):
+#     q=deque([])
+#     q.append((a,b))
+#     graph[a][b]=0
+
+#     dx=[-1,1,0,0]
+#     dy=[0,0,-1,1]
+
+#     while q:
+#         x,y=q.popleft()
+
+#         for i in range(4): #4개의 방향
+#             nx=x+dx[i]
+#             ny=y+dy[i]
+
+#             if nx>=0 and nx<n and ny>=0 and ny<m and graph[nx][ny]==1:
+#                 q.append((nx,ny))
+#                 graph[nx][ny]=0
+
+
+
+
 t = int(input())
+
+
 for _ in range(t):
     #초기화
     m,n,k = map(int,input().split())
