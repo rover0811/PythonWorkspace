@@ -1,0 +1,1 @@
+print("Yes") if int(input()) == sum([(lambda x:x[0]*x[1])(tuple(map(int,input().split()))) for i in range(int(input()))]) else print("No")
