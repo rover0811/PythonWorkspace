@@ -1,7 +1,6 @@
 import requests
 
 cookies = {
-    'ASPSESSIONIDCQCRTSBQ': 'CGNDMJLBPBEPKOBCGMNCCBCI',
     'uid': '',
     'sToken': '',
     'sAddr': '',
@@ -27,18 +26,20 @@ headers = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36',
 }
 
-data = {
-    'in_tp_bit': '0',
-    'rqst_caus_cd': '03',
-    'userid': id,
-    'pwd': pwd,
-}
 
-response = requests.post('https://smartid.ssu.ac.kr/Symtra_sso/smln_pcs.asp', cookies=cookies, headers=headers, data=data)
+def usaint_login(id, pwd):
 
-if response.status_code == 200:
-    print("성공")
-    print(response.text)
+    data = {
+        'in_tp_bit': '0',
+        'rqst_caus_cd': '03',
+        'userid': id,
+        'pwd': pwd,
+    }
+    session = requests.Session()
+    session.post(url='https://smartid.ssu.ac.kr/Symtra_sso/smln_pcs.asp', cookies=cookies, headers=headers, data=data)
+
+    return session
+
 
 
 # exec(open("./gyeryong-hanmadang.py").read())
